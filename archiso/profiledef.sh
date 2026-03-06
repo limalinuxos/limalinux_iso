@@ -2,10 +2,10 @@
 # shellcheck disable=SC2034
 
 iso_name="limalinux"
-iso_label="limalinux_v26.03.00.01"
+iso_label="limalinux_v26.03.06.01"
 iso_publisher="limalinux"
 iso_application="limalinux Live/Rescue CD"
-iso_version="v26.03.00.01"
+iso_version="v26.03.06.01"
 install_dir="arch"
 buildmodes=('iso')
 bootmodes=('bios.syslinux'
