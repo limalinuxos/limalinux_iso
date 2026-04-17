@@ -11,8 +11,8 @@ echo "New Version: $newversion"
 
 # Detect old versions in each file separately
 old_devrel=$(grep -oP 'v\d{2}\.\d{2}\.\d{2}' archiso/airootfs/etc/dev-rel | head -1)
-old_buildiso=$(grep -oP "kiroVersion='v\d{2}\.\d{2}\.\d{2}'" build-scripts/build-the-iso.sh | grep -oP 'v\d{2}\.\d{2}\.\d{2}' | head -1)
-old_profiledef=$(grep -oP 'kiro-v\d{2}\.\d{2}\.\d{2}' archiso/profiledef.sh | grep -oP 'v\d{2}\.\d{2}\.\d{2}' | head -1)
+old_buildiso=$(grep -oP "limalinuxVersion='v\d{2}\.\d{2}\.\d{2}'" build_scripts/build_the_iso.sh | grep -oP 'v\d{2}\.\d{2}\.\d{2}' | head -1)
+old_profiledef=$(grep -oP 'limalinux-v\d{2}\.\d{2}\.\d{2}' archiso/profiledef.sh | grep -oP 'v\d{2}\.\d{2}\.\d{2}' | head -1)
 old_isoversion=$(grep -oP 'iso_version="v\d{2}\.\d{2}\.\d{2}"' archiso/profiledef.sh | grep -oP 'v\d{2}\.\d{2}\.\d{2}' | head -1)
 
 # Debug output
@@ -24,11 +24,11 @@ echo "Old version in profiledef  : $old_profiledef"
 # Replace entire ISO_RELEASE=... line
 sed -i "s|^ISO_RELEASE=.*|ISO_RELEASE=$newversion|" archiso/airootfs/etc/dev-rel
 
-# Replace entire kiroVersion='...' line
-sed -i "s|\(.*kiroVersion='\)[^']*\('.*\)|\1$newversion\2|" build-scripts/build-the-iso.sh
+# Replace entire limalinuxVersion='...' line
+sed -i "s|\(.*limalinuxVersion='\)[^']*\('.*\)|\1$newversion\2|" build_scripts/build_the_iso.sh
 
-# Replace entire iso_label="kiro-..." line
-sed -i "s|^iso_label=\"kiro-.*\"|iso_label=\"kiro-$newversion\"|" archiso/profiledef.sh
+# Replace entire iso_label="limalinux-..." line
+sed -i "s|^iso_label=\"limalinux-.*\"|iso_label=\"limalinux-$newversion\"|" archiso/profiledef.sh
 
 # Replace entire iso_version="..." line
 sed -i "s|^iso_version=\"v.*\"|iso_version=\"$newversion\"|" archiso/profiledef.sh

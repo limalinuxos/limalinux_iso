@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2034
 
-iso_name="kiro"
-iso_label="kiro-v26.04.14.01"
-iso_publisher="kiro"
-iso_application="Kiro Live/Rescue CD"
+iso_name="limalinux"
+iso_label="limalinux-v26.04.14.01"
+iso_publisher="limalinux"
+iso_application="limalinux Live/Rescue CD"
 iso_version="v26.04.14.01"
 install_dir="arch"
 buildmodes=('iso')
