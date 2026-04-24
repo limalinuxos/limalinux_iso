@@ -1,0 +1,12 @@
+NAME="LimaLinux"
+PRETTY_NAME="LimaLinux OS"
+ID=limalinux
+ID_LIKE=arch
+BUILD_ID=rolling
+VERSION_CODENAME=rolling
+LOGO=limalinux
+ANSI_COLOR="1;34"
+HOME_URL="https://github.com/limalinuxos"
+SUPPORT_URL="https://github.com/limalinuxos/limalinux/issues"
+BUG_REPORT_URL="https://github.com/limalinuxos/limalinux/issues"
+DOCUMENTATION_URL="https://github.com/limalinuxos/limalinux/wiki"

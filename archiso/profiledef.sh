@@ -2,10 +2,10 @@
 # shellcheck disable=SC2034
 
 iso_name="limalinux"
-iso_label="limalinux-v26.04.14.01"
+iso_label="limalinux-v26.04.23.01"
 iso_publisher="limalinux"
 iso_application="limalinux Live/Rescue CD"
-iso_version="v26.04.14.01"
+iso_version="v26.04.23.01"
 install_dir="arch"
 buildmodes=('iso')
 bootmodes=('bios.syslinux'
@@ -26,4 +26,7 @@ file_permissions=(
   ["/etc/polkit-1/rules.d"]="0:0:750"
   ["/etc/sudoers.d"]="0:0:750"
   ["/etc/grub.d/40_custom"]="0:0:755"
+  ["/usr/bin/calamares_polkit"]="0:0:755"
+  ["/usr/bin/calamares_wrapper"]="0:0:755"
+  ["/usr/share/applications/cal_limalinux.desktop"]="0:0:755"
 )

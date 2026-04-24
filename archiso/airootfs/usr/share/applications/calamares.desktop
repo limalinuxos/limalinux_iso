@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Name=Install LimaLinux
+Comment=Launch the LimaLinux Installer automatically
+# We use a wrapper to ensure it has a display environment
+Exec=sh -c "sleep 8 && /usr/bin/calamares_wrapper -d"
+Icon=calamares
+Terminal=false
+StartupNotify=true
+Categories=Qt;System;
+# These lines ensure GNOME doesn't skip it
+X-GNOME-Autostart-enabled=true
+X-GNOME-Autostart-Delay=8

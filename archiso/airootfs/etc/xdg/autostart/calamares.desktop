@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Install LimaLinux
+Comment=Launch the LimaLinux Installer automatically
+# 1. Force scaling to 100% | 2. Wait for Shell | 3. Launch Calamares
+Exec=sh -c "gsettings set org.gnome.desktop.interface scaling-factor 1; sleep 10; /usr/bin/calamares_wrapper -d"
+Icon=calamares
+Terminal=false
+StartupNotify=true
+Categories=Qt;System;
+X-GNOME-Autostart-enabled=true
